@@ -1,19 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
   var triviaGameAppear = document.querySelector(".trivia-game");
   var clickButton = document.querySelector(".start-button");
-  var counter = 0;
   timerSet = document.querySelector(".timer");
+  counter = 60;
 
   console.log(clickButton);
   clickButton.addEventListener("click", function () {
     alert("Hello");
     triviaGameAppear.removeAttribute("style");
     triviaGameAppear.style.display = "block";
-    timerSet.appendChild(counter);
-    setTime();
+
+    timerSet.textContent = setInterval(function () {
+      timerSet.innerHTML = counter--;
+    }, 1000);
+
+    //   timerSet.appendChild(counter);
+    //   setInterval(setTime, 1000);
+    //   setTime();
   });
-  function setTime() {
-    counter++;
-  }
-  setInterval(setTime, 1000);
+  // function setTime() {
+  //   counter--;
 });
