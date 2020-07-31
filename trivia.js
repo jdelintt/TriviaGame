@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   var correctAnswer = document.querySelector(".correct-answer");
   var secondTriviaGame = document.querySelector(".trivia-game-one");
   var counter = 60;
-  var clickThis = 1;
 
   console.log(clickButton);
   clickButton.addEventListener("click", function () {
@@ -13,12 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
     triviaGameAppear.removeAttribute("style");
     triviaGameAppear.style.display = "block";
 
-    timerSet.textContent = setInterval(function () {
-      timerSet.innerHTML = counter--;
+    setInterval(function () {
+      counter--;
+      timerSet.textContent = counter;
     }, 1000);
   });
   correctAnswer.addEventListener("click", () => {
     triviaGameAppear.style.display = "none";
     secondTriviaGame.style.display = "block";
+    counter += 10;
   });
 });
