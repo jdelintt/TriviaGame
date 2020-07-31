@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
   var timerSet = document.querySelector(".timer");
   var correctAnswer = document.querySelector(".correct-answer");
   var secondTriviaGame = document.querySelector(".trivia-game-one");
+  var correctAnswerProgress = document.querySelector(".progress-bar-animated");
   var counter = 60;
+  var score = 0;
 
   console.log(clickButton);
   clickButton.addEventListener("click", function () {
@@ -21,5 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     triviaGameAppear.style.display = "none";
     secondTriviaGame.style.display = "block";
     counter += 10;
+    correctAnswerProgress.setAttribute("style", "width: 20%;");
+    score++;
   });
 });
