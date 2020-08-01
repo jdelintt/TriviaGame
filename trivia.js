@@ -17,12 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log(clickButton);
   clickButton.addEventListener("click", function () {
-    alert("Hello");
+    console.log("Hello");
     triviaGameAppear.removeAttribute("style");
     triviaGameAppear.style.display = "block";
 
     setInterval(function () {
-      counter--;
+      if (counter > 0) counter--;
       timerSet.textContent = counter;
     }, 1000);
   });
@@ -43,24 +43,26 @@ document.addEventListener("DOMContentLoaded", () => {
     secondTriviaGame.removeAttribute("style");
     secondTriviaGame.style.display = "none";
     thirdTriviaGame.removeAttribute("style");
-    thirdTriviaGame.stlye.display = "block";
+    thirdTriviaGame.style.display = "block";
     counter += 10;
   });
   correctAnswerThree.addEventListener("click", function () {
+    correctAnswerProgress.removeAttribute("style", "width:");
+    correctAnswerProgress.setAttribute("style", "width: 60%;");
     thirdTriviaGame.removeAttribute("style");
     thirdTriviaGame.style.display = "none";
     fourthTriviaGame.removeAttribute("style");
-    fourthTriviaGame.stlye.display = "block";
+    fourthTriviaGame.style.display = "block";
     counter += 10;
-    correctAnswerProgress.setAttribute("style", "width: 60%;");
   });
   correctAnswerFour.addEventListener("click", function () {
+    correctAnswerProgress.removeAttribute("style", "width:");
+    correctAnswerProgress.setAttribute("style", "width: 80%;");
     fourthTriviaGame.removeAttribute("style");
     fourthTriviaGame.style.display = "none";
     fifthTriviaGame.removeAttribute("style");
-    fifthTriviaGame.stlye.display = "block";
+    fifthTriviaGame.style.display = "block";
     counter += 10;
-    correctAnswerProgress.setAttribute("style", "width: 80%;");
   });
   correctAnswerFive.addEventListener("click", function () {
     fifthTriviaGame.style.display = "none";
