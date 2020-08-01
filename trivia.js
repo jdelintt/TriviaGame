@@ -38,13 +38,13 @@ document.addEventListener("DOMContentLoaded", () => {
     secondTriviaGame.style.display = "block";
   });
   correctAnswerTwo.addEventListener("click", function () {
+    correctAnswerProgress.removeAttribute("style", "width:");
+    correctAnswerProgress.setAttribute("style", "width: 40%;");
     secondTriviaGame.removeAttribute("style");
     secondTriviaGame.style.display = "none";
     thirdTriviaGame.removeAttribute("style");
     thirdTriviaGame.stlye.display = "block";
     counter += 10;
-    correctAnswerProgress.removeAttribute("style");
-    correctAnswerProgress.setAttribute("style", "width: 40%;");
   });
   correctAnswerThree.addEventListener("click", function () {
     thirdTriviaGame.removeAttribute("style");
