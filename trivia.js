@@ -21,9 +21,9 @@ $(document).ready(function () {
   console.log(clickButton);
   clickButton.addEventListener("click", function () {
     console.log("Hello");
-    $("#myModal").modal("show");
     triviaGameAppear.removeAttribute("style");
     triviaGameAppear.style.display = "block";
+
     setInterval(function () {
       if (counter > 0) counter--;
       timerSet.textContent = counter;
@@ -115,5 +115,9 @@ $(document).ready(function () {
       return b.score - a.score;
     });
     localStorage.setItem("dataInfo", JSON.stringify(scoreData));
+    const showScoreData = JSON.parse(localStorage.getItem("data-info"));
+    document.getElementById("score-card").append(showScoreData);
+
+    $(".alert").alert();
   });
 });
