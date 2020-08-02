@@ -31,6 +31,7 @@ $(document).ready(function () {
   });
   correctAnswerOne.addEventListener("click", function () {
     if (counter === 0) {
+      alert("Time is up. Enter your initials in the next window");
       $("#myModal").modal("show");
       return;
     }
@@ -46,6 +47,7 @@ $(document).ready(function () {
   });
   correctAnswerTwo.addEventListener("click", function () {
     if (counter === 0) {
+      alert("Time is up. Enter your initials in the next window");
       $("#myModal").modal("show");
       return;
     }
@@ -60,6 +62,7 @@ $(document).ready(function () {
   });
   correctAnswerThree.addEventListener("click", function () {
     if (counter === 0) {
+      alert("Time is up. Enter your initials in the next window");
       $("#myModal").modal("show");
       return;
     }
@@ -74,6 +77,7 @@ $(document).ready(function () {
   });
   correctAnswerFour.addEventListener("click", function () {
     if (counter === 0) {
+      alert("Time is up. Enter your initials in the next window");
       $("#myModal").modal("show");
       return;
     }
@@ -88,6 +92,7 @@ $(document).ready(function () {
   });
   correctAnswerFive.addEventListener("click", function () {
     if (counter === 0) {
+      alert("Time is up. Enter your initials in the next window");
       $("#myModal").modal("show");
       return;
     }
