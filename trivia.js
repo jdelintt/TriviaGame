@@ -14,7 +14,7 @@ $(document).ready(function () {
   var fourthTriviaGame = document.querySelector(".trivia-game-four");
   var fifthTriviaGame = document.querySelector(".trivia-game-five");
   var correctAnswerProgress = document.querySelector(".progress-bar-animated");
-  var printInitialsInfo = JSON.parse(localStorage.getItem("scoreData")) || [];
+  var printInitialsInfo = localStorage.setItem("initials-input", JSON.stringify(highscore);
   console.log(printInitialsInfo);
 
   var counter = 60;
@@ -104,36 +104,34 @@ $(document).ready(function () {
     score += 1;
     correctAnswerProgress.setAttribute("style", "width: 100%;");
   });
-  document
-    .getElementById("save-button")
-    .addEventListener("submit", function () {
-      // var initials = document.getElementById("initials-input").value;
-      // alert(`Thank you for playing ${initials}`)
-      // if (initials === "") {
-      //   return;
-      // }
-      // var scoreData = localStorage.getItem("dataInfo");
-      // if (scoreData === null) {
-      //   scoreData = [];
-      // } else scoreData = JSON.parse(scoreData);
-      // scoreData.push({ initials: initials, score: score });
-      // scoreData.sort(function (a, b) {
-      //   return b.score - a.score;
-      // });
-      // var initialsInfo = JSON.stringify(scoreData);
-      // localStorage.setItem("scoreData", initialsInfo);
-      // console.log(printInitialsInfo);
-      // var scoreCardHTML = "";
-      // for (var i = 0; i < printInitialsInfo.length; i++) {
-      //   console.log(printInitialsInfo[i]);
-      //   scoreCardHTML += "<h3>printInitialsInfo[i].initials</h3>";
-      //   document.getElementById("score-card").append(scoreCardHTML);
-      // }
-      // var showScoreData = JSON.parse(localStorage.getItem("scoreData"));
-      // document.getElementById("score-card").append("scoreData");
-      // localStorage.setItem("dataInfo", JSON.stringify(scoreData));
-      // const showScoreData = JSON.parse(localStorage.getItem("data-info"));
-      // document.getElementById("score-card").innerHTML(showScoreData);
-      // $(".alert").alert();
-    });
+  document.getElementById("save-button").addEventListener("click", function () {
+    // var initials = document.getElementById("initials-input").value;
+    // alert(`Thank you for playing ${initials}`)
+    // if (initials === "") {
+    //   return;
+    // }
+    // var scoreData = localStorage.getItem("dataInfo");
+    // if (scoreData === null) {
+    //   scoreData = [];
+    // } else scoreData = JSON.parse(scoreData);
+    // scoreData.push({ initials: initials, score: score });
+    // scoreData.sort(function (a, b) {
+    //   return b.score - a.score;
+    // });
+    // var initialsInfo = JSON.stringify(scoreData);
+    // localStorage.setItem("scoreData", initialsInfo);
+    // console.log(printInitialsInfo);
+    // var scoreCardHTML = "";
+    // for (var i = 0; i < printInitialsInfo.length; i++) {
+    //   console.log(printInitialsInfo[i]);
+    //   scoreCardHTML += "<h3>printInitialsInfo[i].initials</h3>";
+    //   document.getElementById("score-card").append(scoreCardHTML);
+    // }
+    // var showScoreData = JSON.parse(localStorage.getItem("scoreData"));
+    // document.getElementById("score-card").append("scoreData");
+    // localStorage.setItem("dataInfo", JSON.stringify(scoreData));
+    // const showScoreData = JSON.parse(localStorage.getItem("data-info"));
+    // document.getElementById("score-card").innerHTML(showScoreData);
+    // $(".alert").alert();
+  });
 });
